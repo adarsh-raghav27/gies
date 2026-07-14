@@ -123,9 +123,6 @@ export default function LandingPage() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white border-0 text-md px-8 h-12 rounded-full">
-                  Product Catalog
-                </Button>
                 <Button 
                   size="lg" 
                   variant="outline" 
@@ -499,9 +496,6 @@ export default function LandingPage() {
               onClick={() => document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Partner with Us
-            </Button>
-            <Button size="lg" variant="outline" className="bg-transparent border-white/20 text-white hover:bg-white/10 rounded-full px-8 text-lg font-semibold h-14">
-              Wholesale Catalog
             </Button>
           </div>
         </div>

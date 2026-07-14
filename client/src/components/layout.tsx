@@ -94,15 +94,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </div>
             </div>
 
-            <a
-              href="#"
-              className={cn(
-                "hover:text-primary transition-colors",
-                scrolled ? "text-foreground" : "text-white/90 hover:text-white"
-              )}
-            >
-              Downloads
-            </a>
             <button 
               onClick={() => {
                 const footer = document.getElementById('footer');

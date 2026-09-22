@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { 
-  ArrowRight, Wind, Droplets, Fan, Leaf, ShieldCheck, Zap, 
+  ArrowRight, Wind, Droplets, Leaf, ShieldCheck, Zap, 
   BarChart3, Globe2, ChevronLeft, ChevronRight, 
   Activity, Gauge, Layers, Settings2, Box, Scissors 
 } from "lucide-react";
@@ -12,7 +12,6 @@ import { cn } from "@/lib/utils";
 import heroImage from "@assets/stock_images/modern_glass_office__fd5de25f.jpg";
 import airMonitorImage from "@assets/AQI_Sensor_1768988933631.png";
 import inductAQIImage from "@assets/Induct_AQI_1768990185498.png";
-import ecFanImage from "@assets/ECFAN2_1768994071339.png";
 
 import indoorAQIHero from "@assets/Gemini_Generated_Image_ut0xdqut0xdqut0x_1768996140673.png";
 import inductAQIHero from "@assets/Gemini_Generated_Image_5i5k195i5k195i5k_1768995579375.png";
@@ -25,16 +24,10 @@ const slides = [
     tag: "Green India Ecotech Services"
   },
   {
-    image: ecFanImage,
-    title: "Precision Environmental Control",
-    description: "From advanced Air Quality Monitors to high-efficiency AHUs and Water Dosage systems, GIES provides the critical infrastructure for sustainable industrial operations.",
-    tag: "Engineered for Clean Environments"
-  },
-  {
     image: inductAQIHero,
     title: "Industrial In-Duct Monitoring",
     description: "Enterprise-grade sensing integrated directly into your ventilation systems. Robust, accurate, and built for continuous industrial deployment.",
-    tag: "HVAC Integrated Solutions"
+    tag: "Ventilation Integrated Solutions"
   },
   {
     image: indoorAQIHero,
@@ -256,25 +249,13 @@ export default function LandingPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {[
               {
                 icon: Wind,
                 title: "Air Quality Monitors",
                 desc: "Real-time sensing for VOCs, CO2, and particulate matter with industrial-grade accuracy.",
                 tag: "Bestseller"
-              },
-              {
-                icon: Fan,
-                title: "EC Fans & Ventilation",
-                desc: "High-efficiency electronically commutated fans for AHUs and server rooms.",
-                tag: "High Efficiency"
-              },
-              {
-                icon: Zap,
-                title: "AHUs & HVAC",
-                desc: "Custom Air Handling Units designed for hospitals, labs, and industrial plants.",
-                tag: "Custom Built"
               },
               {
                 icon: Droplets,
@@ -398,14 +379,14 @@ export default function LandingPage() {
                 For Industrial Ventilation
               </h2>
               <p className="text-slate-600 mb-8 text-lg leading-relaxed">
-                The GIES In-Duct AQI Monitor is engineered for heavy-duty industrial HVAC systems, providing real-time data from within your ventilation network.
+                The GIES In-Duct AQI Monitor is engineered for heavy-duty industrial ventilation systems, providing real-time data from within your ventilation network.
               </p>
               
               <ul className="space-y-4 mb-8">
                 {[
                   "Industrial-grade duct mounting",
                   "Resilient housing for high-airflow",
-                  "Seamless AHU controller integration",
+                  "Seamless building controller integration",
                   "High-precision long-range telemetry"
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3 text-slate-700 font-medium">
@@ -418,61 +399,6 @@ export default function LandingPage() {
               <Button className="bg-slate-900 text-white hover:bg-slate-800 rounded-full px-8 h-12">
                 In-Duct Series Specs
               </Button>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Detailed Product Spotlight - EC Fans */}
-      <section id="ec-fans" className="py-24 bg-slate-50 overflow-hidden border-b border-slate-200">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
-                High-Efficiency EC Fans <br />
-                Precision Air Solutions
-              </h2>
-              <p className="text-slate-600 mb-8 text-lg leading-relaxed">
-                Our Electronically Commutated (EC) fans are designed for global innovation and local excellence, delivering superior energy efficiency and precise airflow control.
-              </p>
-              
-              <ul className="space-y-4 mb-8">
-                {[
-                  "Advanced EC motor technology",
-                  "Significant energy savings",
-                  "Integrated speed control",
-                  "Silent and vibration-free operation"
-                ].map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-slate-700 font-medium">
-                    <Fan className="w-5 h-5 text-primary" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-
-              <Button className="bg-primary text-white hover:bg-primary/90 rounded-full px-8 h-12">
-                EC Fan Series Specs
-              </Button>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="absolute -top-10 -right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
-              <img 
-                src={ecFanImage} 
-                alt="GIES EC Fan" 
-                className="relative z-10 rounded-2xl shadow-2xl border border-white"
-                loading="lazy"
-                decoding="async"
-              />
             </motion.div>
           </div>
         </div>

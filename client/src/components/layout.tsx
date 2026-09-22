@@ -75,8 +75,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <div className="bg-white rounded-xl shadow-xl border border-slate-100 p-2 overflow-hidden">
                   {[
                     { name: "Indoor AQI Monitors", id: "indoor-aqi" },
-                    { name: "Induct AQI Monitors", id: "induct-aqi" },
-                    { name: "EC Fans", id: "ec-fans" }
+                    { name: "Induct AQI Monitors", id: "induct-aqi" }
                   ].map((subItem) => (
                     <a
                       key={subItem.id}

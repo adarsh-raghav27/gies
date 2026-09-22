@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import { Mail, Phone, MapPin, ChevronDown } from "lucide-react";
+import { Mail, MapPin, ChevronDown } from "lucide-react";
 import logoImage from "@assets/generated_images/minimalist_corporate_logo_for_gies_in_green_and_white.png";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -163,12 +163,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   </span>
                   operations@green-india.in
                 </a>
-                <p className="flex items-center gap-3 group cursor-pointer hover:text-white transition-colors">
-                  <span className="p-2 rounded-lg bg-slate-800 text-primary group-hover:bg-primary group-hover:text-white transition-all">
-                    <Phone className="w-4 h-4" />
-                  </span>
-                  +91 124 4567 890
-                </p>
                 <p className="flex items-center gap-3 group cursor-pointer hover:text-white transition-colors">
                   <span className="p-2 rounded-lg bg-slate-800 text-primary group-hover:bg-primary group-hover:text-white transition-all">
                     <MapPin className="w-4 h-4" />
